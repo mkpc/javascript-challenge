@@ -18,8 +18,11 @@
                 <p class="lead">To recieve useless marketing materials for the rest of your natural life, please complete this form!</p>
             </div>
 
-            <form name="signup" action="http://info343.ischool.uw.edu:8888/signup" method="post" 
-                class="form-horizontal" role="form">
+            <p class="alert alert-danger" id="error-message"></p>
+
+            <form id = "signup" name="signup" action="http://info343.ischool.uw.edu:8888/echo" method="POST"
+                  class="form-horizontal" role="form">
+
 
                 <div class="form-group">
                     <label for="firstName" class="col-sm-2 control-label">Name</label>
@@ -44,11 +47,17 @@
                     <div class="col-sm-5">
                         <input type="text" name="city" id="city" class="form-control" placeholder="your city (required)">
                     </div>
+
+
+
                     <div class="col-sm-2">
-                        <select name="state" class="form-control">
+                        <select name="state" id="state" class="form-control">
                             <option value="" selected disabled>state (req)</option>
                         </select>
                     </div>
+
+
+
                     <div class="col-sm-3">
                         <input type="text" name="zip" class="form-control" placeholder="zip code (required)">
                     </div>
@@ -90,7 +99,7 @@
                         </select>
                     </div>
                     <div class="col-sm-5">
-                        <input type="text" name="occupationOther" class="form-control" placeholder="what do you mean by other?">
+                        <input type="text" id="occupationOther" name="occupationOther" class="form-control" placeholder="what do you mean by other?">
                     </div>
                 </div>
 
@@ -110,9 +119,10 @@
                         <button type="submit" class="btn btn-primary">Sign Me Up!</button>
                     </div>
                 </div>
-
             </form>
+
         </div> <!-- .container -->
+
 
         <script src="js/us-states.js"></script>
         <script src="js/signup.js"></script>
