@@ -18,10 +18,8 @@
                 <p class="lead">To recieve useless marketing materials for the rest of your natural life, please complete this form!</p>
             </div>
 
-            <p class="alert alert-danger" id="error-message"></p>
-
-            <form id = "signup" name="signup" action="http://info343.ischool.uw.edu:8888/echo" method="POST"
-                  class="form-horizontal" role="form">
+            <form name="signup" id="signup" action="http://info343.ischool.uw.edu:8888/signup" method="post" 
+                class="form-horizontal" role="form">
 
 
                 <div class="form-group">
@@ -59,7 +57,7 @@
 
 
                     <div class="col-sm-3">
-                        <input type="text" name="zip" class="form-control" placeholder="zip code (required)">
+                        <input type="text" id="zip" name="zip" class="form-control" placeholder="zip code (required)">
                     </div>
                 </div>
 
@@ -120,7 +118,7 @@
                     </div>
                 </div>
             </form>
-
+            <p id="age-message" class="lead"></p>
         </div> <!-- .container -->
 
 
