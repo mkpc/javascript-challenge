@@ -37,9 +37,7 @@ function onReady() {
            isOther = false;
        }
     });
-
     signupForm.addEventListener('submit', onSubmit);
-     
 }
 
 
@@ -108,11 +106,15 @@ function validateForm(form){
         valid &= validateRequiredField(form.elements['occupationOther']);
     }
 
-    
-    valid &= zipRegExp.test(zipNum);
-    
+    if(zipRegExp.test(zipNum)){
+        showError("",false);
+        valid &= true;
+    }else{
+        showError("Your zip code invalid!" , true)
+        zip.className = 'form-control invalid';
+        valid &=false;
+    }
    
-    
     if(age<13){
         showError("You must be at least 13 years ago! " , true);
         birthdate.className = 'form-control invalid';
