@@ -107,10 +107,8 @@ function validateForm(form){
     }
 
     if(zipRegExp.test(zipNum)){
-        showError("",false);
         valid &= true;
-    }else{
-        showError("Your zip code invalid!" , true)
+    }else{   
         zip.className = 'form-control invalid';
         valid &=false;
     }
@@ -118,7 +116,9 @@ function validateForm(form){
     if(age<13){
         showError("You must be at least 13 years ago! " , true);
         birthdate.className = 'form-control invalid';
-        valid &= false;
+        valid &= false;    
+    }else{
+        showError("",false);
     }
     
     return valid;
