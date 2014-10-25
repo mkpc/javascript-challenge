@@ -82,7 +82,6 @@ function calculateAge(dob){
 function showError(message, isError){
 
     var BdayMessage = document.getElementById('birthdateMessage');
-    console.log(message);
     BdayMessage.innerHTML = message;
     BdayMessage.className = isError ? 'alert alert-danger' :'alert alert-success';
     BdayMessage.style.display = 'block';
